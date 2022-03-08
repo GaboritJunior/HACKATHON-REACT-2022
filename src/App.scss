@@ -1,0 +1,22 @@
+@use './assets/style/scss/reset.scss';
+@use './assets/style/scss/fonts.scss';
+
+.rank{
+    width: 10%;
+    direction: rtl;
+}
+.rank__e{
+    color: #aaa;
+    transition: color .4s;
+    float: right;
+    font-size: 1rem;
+}
+
+.rank__e:hover,
+.rank__e:focus,
+.rank__e:hover ~ .rank__e,
+.rank__e:focus ~ .rank__e{
+    color: gold;
+    cursor: pointer;
+}
+

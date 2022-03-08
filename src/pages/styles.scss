@@ -1,0 +1,1372 @@
+$bleu: #3141F6;
+$rouge: #F2452D;
+$vert: #4EAA69;
+$jaune: #F7D045;
+$rose: #F198B6;
+$fond: #FFF6F6;
+$fondbleu: #EAECFE;
+
+$typo : #000000;
+$fondInput : #EBEBEB;
+$titre : "'Bowlby One SC', cursive";
+
+/* Regles generales */
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+ 
+  font-size: 1.4rem;
+  background-color: $fond;
+  font-family: 'Alef', sans-serif;
+}
+
+a, a:hover, a:visited{              
+  color: #FFF;
+  text-decoration: none;
+}
+img{
+  max-width:100%;
+  height: auto;
+  vertical-align: middle; 
+}
+
+/*******************************/
+/* Starter: Presentation       */
+/*****************************/
+
+/*******************************/
+/* PAGE : connexion       */
+/*****************************/
+
+
+/*html{
+  overflow: hidden;
+}
+body{
+  max-width: 100vw;
+  overflow: hidden;
+}*/
+
+.form-function{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10vh;
+  background-color: $bleu;
+  width: 90vw;
+  height: 30px;
+  font-family: 'Bowlby One SC', cursive;
+  color: white;
+  font-size: 1.3rem;
+  &--moniteur{
+    padding: 9px;
+    background-color: $vert;
+  }
+}
+.form-connexion{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $bleu;
+  width: 90vw;
+  height: 50vh;
+  input{
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 0;
+    height: 30px;
+  }
+  a{
+    font-family: 'Alef', sans-serif;
+  }
+  ::placeholder{
+    font-family: 'Alef', sans-serif;
+    padding: 10px;
+  }
+  .form-btn{
+    margin-top: 10vh;
+     input[value="Se connecter"]{
+    font-family: 'Bowlby One SC', cursive;
+    color: $bleu;
+    background-color: white;
+  }
+  }
+ 
+}
+/*******************************/
+/* PAGE : Eleve- affichage des sceances recherche       */
+/*****************************/
+.eleves {
+  min-height: 100vh;
+  background-color: $fondbleu;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+ 
+  .sceance__miseEnAvant{
+    background-color: $bleu;
+    width: 100vw;
+    &__title{
+      font-family: 'Bowlby One SC', cursive;
+      color: white;
+      margin: 10px;
+    }
+    .sceance{
+      background-color: #FFF;
+      display: flex;
+      .moniteur__prénom{
+        display:inline-block;
+      }
+    }
+  }
+  .sceances{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .sceance{
+      background-color: #FFF;
+      display: flex;
+      .moniteur__prénom{
+        display:inline-block;
+      }
+    }
+  }
+  
+
+
+
+  .menu__mobile {
+    z-index:1000 ;
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      background-color: rgb(0, 0, 0);
+      color: white;
+      height: 10vh;
+      a{
+        color: white;
+        font-size: 1.1rem;
+      }
+      li{
+        margin: 10px;
+        width: 20vw;
+        flex-grow: 1;
+      }
+      i{
+        font-size: 2rem;
+        margin-bottom: 8px;
+      }
+    }
+    &--col{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+
+  &--bleu {
+    background-color: $bleu;
+  }
+}
+
+/*******************************/
+/* PAGE : Eleve- recherche séances       */
+/*****************************/
+.eleves__name{
+  margin-top: 30px;
+ font-family: 'Alef', sans-serif;
+ color: #FFF;
+}
+.form-recherche{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 80vw;
+  background-color: #FFF;
+&__title{
+  padding: 20px;
+  font-family: 'Bowlby One SC', cursive;
+  color: $bleu;
+}
+    input, select{
+      margin: 10px;
+      background-color: rgb(236, 236, 236);
+      border: 0;
+      height: 30px;
+      width: 50vw;
+    }
+    .form-btn{
+      margin-top: 10vh;
+       input[value="Rechercher"]{
+      font-family: 'Bowlby One SC', cursive;
+      color: #fff;
+      background-color: $bleu;
+    }
+    }
+}
+@media screen and (min-width: 1200px){
+  .eleves__name{
+   text-align: right;
+   margin-right: 50px;
+   width: 100vw;
+  }
+  .form-recherche__title{
+    width: 100vw;
+    text-align: center;
+    font-size: 3rem;
+  }
+  .form-recherche{
+    width: 60vw;
+    margin-left: 20vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    input, select{
+      width: 20vw;
+      height: 50px;
+    }
+    .form-btn{
+      margin-top: 0;
+    }
+  }
+}
+/*******************************/
+/* PAGE : Eleve- affichage des crédits       */
+/*****************************/
+.credits {
+  background-color: rgba($color: #3141F6, $alpha: 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+
+  &__title {
+      margin-top: 6rem;
+      font-size: 2rem;
+      font-family: 'Bowlby One', cursive;
+      text-transform: uppercase;
+      color: #3141F6;
+      margin-bottom: 2rem;
+  }
+
+  &__subtitle {
+      font-size: 1.5rem;
+      font-family: 'Bowlby One', cursive;
+      text-transform: uppercase;
+      color: #3141F6;
+      margin-bottom: 2rem;
+  }
+
+  &-list {
+      display: grid;
+      grid-template-columns: repeat(3, 350px);
+      grid-gap: 3rem;
+
+      & .offer {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          width: 100%;
+          height: 500px;
+          background-color: #fff;
+
+          &-name {
+              font-size: 2.5rem;
+              font-family: 'Bowlby One', cursive;
+              color: #3141F6;
+          }
+
+          &-price {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              font-family: 'Alef', sans-serif;
+              font-weight: bold;
+              font-size: 2rem;
+              color: #3141F6;
+
+              &-content {
+                  font-size: 3.5rem;
+                  font-weight: normal;
+                  font-family: 'Bowlby One', cursive;
+                  color: #3141F6;
+                  margin-bottom: 1rem;
+              }
+          }
+
+          &-total {
+              font-size: 1.5rem;
+              font-family: 'Alef', sans-serif;
+              font-weight: bold;
+              color: #3141F6;
+          }
+
+          &-btn {
+              cursor: pointer;
+              background-color: #3141F6;
+              font-family: 'Bowlby One', cursive;
+
+              color: #fff;
+              border: none;
+              width: 85%;
+              height: 70px;
+              font-weight: 500;
+              font-size: 1.5rem;
+          }
+      }
+  }
+}
+/*******************************/
+/* PAGE : Inscription         */
+/*****************************/
+
+.container {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.register {
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  grid-gap: 4rem;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+
+    &-title {
+      color: #fff;
+      font-size: 2.5rem;
+      font-family: Bowlby One;
+      margin-bottom: 2rem;
+    }
+
+    &--blue {
+      background-color: #3141F6;
+    }
+
+    &--green {
+      background-color: #4EAA69;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+
+      &-input {
+        border: none;
+        padding: 1.5rem;
+        width: 100%;
+        margin-bottom: 2rem;
+        &::placeholder {
+          opacity: 1;
+          font-family: Alef, sans-serif;
+        }
+      }
+
+      &-submit {
+        border: none;
+        width: 50%;
+        height: 5rem;
+        align-self: center;
+        font-family: Bowlby One;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        background-color: #fff;
+
+        &--blue {
+          color: #3141F6;
+        }
+    
+        &--green {
+          color: #4EAA69;
+        }
+    
+      }
+    }
+  }
+}
+
+/*******************************/
+/* PAGE : Connexion           */
+/*****************************/
+
+.container {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #3141F6;
+    width: 500px;
+
+    &-title {
+      color: #fff;
+      font-size: 2.5rem;
+      font-family: Bowlby One;
+      margin-bottom: 2rem;
+    }
+
+  
+    .form {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+
+      &-input {
+        border: none;
+        padding: 1.5rem;
+        width: 100%;
+        margin-bottom: 2rem;
+        &::placeholder {
+          opacity: 1;
+          font-family: Alef, sans-serif;
+        }
+      }
+
+      &-submit {
+        border: none;
+        width: 50%;
+        height: 5rem;
+        align-self: center;
+        font-family: Bowlby One;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        cursor: pointer;
+        background-color: #fff;
+
+        &--blue {
+          color: #3141F6;
+        }
+    
+        &--green {
+          color: #4EAA69;
+        }
+    
+      }
+    }
+}
+/*******************************/
+/* Parts : Header             */
+/*****************************/
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  background-color: #FFF6F6;
+  height: 100vh;
+  width: 300px;
+  border-right: solid #DFDFDF 1px;
+
+  & .nav {
+    width: 100%;
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+      margin-left: 5rem;
+      
+
+      &__item {
+        color: #000;
+        font-size: 2rem;
+        font-family: Alef;
+        margin-bottom: 2rem;
+
+        &--subitem {
+          position: relative;
+          left: 4rem;
+        }
+      }
+    }
+  }
+}
+
+/*******************************/
+/* PAGE : Eleve- affichage des sceances recherche       */
+/*****************************/
+
+@media screen and (min-width: 1200px){
+  .eleves{
+
+  .menu__mobile {
+    ul{
+      flex-direction: column;
+      padding: 50vh 0;
+      height: 100vh;
+      width: 20vw;
+      background-color: rgb(255, 255, 255);
+      align-items: center;
+      height: 5vh;
+      
+      a{
+        color: black; 
+      }
+    }
+    &--col{
+      width: 50%;
+      margin: 30px;
+      display: flex;
+      flex-direction: row;
+      margin-top: 0px;
+      i{
+        margin-right: 20px;
+      }
+    }
+  }
+}}
+/*******************************/
+/* PAGE : Accueil     */
+/*****************************/
+
+@media screen and (min-width:500px){
+
+
+  .header{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      .header__link{
+          text-align: center;
+          background-color: $rose;
+          padding: 1rem 7rem;
+          position: absolute;
+          top: 5vw;
+          right: 10vw;
+          
+      }
+
+      .header__heroSection {
+          display: grid;
+          grid-template-columns: 61% 39%;
+          overflow: hidden;
+
+          .header__titreApresGrid{
+
+              display: none;
+
+          }
+  
+          
+  
+          .header__grid{
+              display: grid;
+              justify-items: center;
+              align-items: center;
+              grid-template-rows: 20% 20% 20% 20% 20%;
+              grid-template-columns: 20% 20% 20% 20% 20%;
+              //position: absolute;
+              //top: 0;
+              //left: 0;
+              
+  
+              .header__titre {
+                  font-family: 'Bowlby One', cursive;
+                  font-size: 2.5vw;
+                  justify-self: baseline;
+                  margin-left: 2rem;
+                  line-height: 130%;
+  
+                  grid-column-start: 2;
+                  grid-row-start: 2;
+                  grid-column-end: 6;
+                  grid-row-end: 4;
+  
+                  background-color: $fond;
+                  
+          
+                  &--retour {
+                      display: block;
+                  }
+          
+                  &--rose {
+                      color: $rose;
+                  }
+              }
+  
+              
+      
+              .header__link{
+                  display: none;
+              }
+  
+  
+              .header__img{
+                  height: 100%;
+                  width: 100%;
+  
+                  &--feux{
+  
+                      grid-column-start: 2;
+  
+                  }
+  
+                  &--bulle{
+  
+                  }
+  
+                  &--roue{
+  
+                      grid-row-start: 2;
+                      
+                  }
+                  
+                  &--panneaux{
+  
+                      grid-row-start: 3;
+                      
+                  }
+  
+                  &--map{
+  
+                      grid-row-start: 4;
+                      
+                  }
+  
+                  &--pieton{
+  
+                      grid-row-start: 4;
+                      grid-column-start: 2;
+                      grid-column-end: 4;
+                      
+                  }
+  
+                  &--voiture{
+  
+                      grid-row-start: 4;
+                      
+                  }
+  
+                  &--route{
+  
+                      grid-row-start: 5;
+                      grid-column-start: 3;
+                      grid-column-end: 6;
+                      
+                  }
+              }
+
+              .header__linkLogo{
+                      width: 50%;
+                      height: 50%;
+
+              }
+  
+              
+  
+  
+              
+  
+          }
+  
+          .header__bg{
+              grid-column-start: 2;
+              background-color: $bleu;
+              padding: 5vw;
+              margin-top: 15rem;
+              position: relative;
+              z-index: 1;
+              width: 100%;
+              height: 100%;
+              text-align: center;
+  
+              
+              
+              
+  
+              .header__sousTitre {
+                  font-family: 'Bowlby One', cursive;
+                  font-size: 1.6vw;
+                  color: white;
+                  text-align: center;
+              }
+  
+              .header__form{
+  
+                  
+                  height: 30vw;
+                  font-size: 1.3vw;
+                  display: flex;
+                  flex-direction: column;
+                  margin-top: 6vw;
+                  text-align: left;
+                  
+      
+                  
+      
+                  .header__input{
+      
+                      font-size: 1.3vw;
+                      border: none;
+                      background-color: $fondInput;
+                      margin: 1rem;
+                      height: 5rem;
+                      
+      
+                  }
+      
+                  .header__label{
+      
+                      margin-left: 1rem;
+                      color: white;
+      
+                  }
+      
+                  .header__submit{
+      
+                      background-color: $bleu;
+                      border: $typo solid 1px;
+                      font-size: 1.3rem;
+                      font-family: 'Bowlby One', cursive;
+                      color: white;
+                      margin: auto;
+                      padding: 1rem 3rem;
+      
+                  }
+              }
+  
+          }
+  
+          
+          
+      }
+
+  }
+
+  .main {
+  
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 80vh;
+
+    .main__img {
+      padding: 5vh 15vw 5vh 15vw; 
+    }
+
+    .main__presentation {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .main__titre {
+        font-size: 1.5vw;
+        font-family: 'Bowlby One', cursive;
+        margin-bottom: 2.5vh;
+      }
+
+      .main__explication {
+        font-size: 1vw;
+        width: 30vw ;
+        margin-bottom: 2.5vh;
+      }
+
+      .main__etape {
+        font-size: 0.9vw;
+        width: 30vw;
+        margin-top: 4vh;
+        text-transform: uppercase;
+
+        .main__etape--chiffre {
+          font-family: 'Bowlby One', cursive;
+          font-size: 4vw;
+          color: $fond;
+          -webkit-text-stroke: 2px $bleu;
+          margin-right: 4vw;
+        }
+
+        .main__etape--chiffre1 {
+          font-family: 'Bowlby One', cursive;
+          font-size: 4vw;
+          color: $bleu;
+          margin-right: 4vw;
+        }
+
+      }
+
+    }
+  
+  }
+
+  .frise {
+    display: grid;
+    grid-template-columns: 10vw 30vw 10vw 10vw 10vw 29vw;
+
+    .frise__img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .moniteurs {
+
+    height: 40vh;
+
+    .moniteurs__titre {
+
+      font-family: 'Bowlby One', cursive;
+      font-size: 3.5vh;
+      margin: 18vh 0vw 13vh 10vw;
+
+    }
+
+    .moniteurs__presentation {
+
+      display: grid;
+      grid-template-columns: repeat(3, 33vw);
+
+      .moniteurs__carte {
+        
+        width: 100%;
+
+      }
+      
+    }
+
+  }
+
+  .temoignage {
+    position: relative;
+    height: 80vh;
+
+    .temoignage__titre {
+
+      font-family: 'Bowlby One', cursive;
+      font-size: 3.5vh;
+      margin: 25vh 0vw 10vh 10vw;
+
+    }
+
+    .temoignage__article--jaune {
+      position: absolute;
+      top: 10vh;
+      left: 15vw;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      background: $jaune;
+      height: 25vh;
+      width: 25vh;
+      border-radius: 50%;
+      padding: 3%;
+    }
+    
+    .temoignage__article--vert {
+      position: absolute;
+      top: 10vh;
+      right: 15vw;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      background: $vert;
+      height: 30vh;
+      width: 30vh;
+      border-radius: 50%;
+      padding: 3%;
+    }
+
+    .temoignage__article--bleu {
+      display: grid;
+      position: absolute;
+      bottom: 5vh;
+      left: 30vw;
+      justify-content: center;
+      align-items: center;
+      background: $bleu;
+      height: 35vh;
+      width: 35vh;
+      border-radius: 50%;
+      padding: 3%;
+    }
+    
+    .temoignage__article--rouge {
+      display: grid;
+      position: absolute;
+      bottom: 5vh;
+      right: 30vw;
+      justify-content: center;
+      align-items: center;
+      background: $rouge;
+      height: 20vh;
+      width: 20vh;
+      border-radius: 50%;
+      padding: 3%;
+    }
+
+  }
+
+  .friseBas {
+    display: grid;
+    grid-template-columns: 10vw 20vw 10vw 10vw 10vw 10vw 10vw 19vw;
+
+    .friseBas__img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+}
+  
+
+@media screen and (max-width:500px){
+
+  .header{
+    
+      .header__link{
+          display: none;
+     }
+
+     .header__heroSection{
+       
+      display:flex;
+      flex-direction:column;
+      align-items: center;
+      max-height: 200vh;
+
+      .header__titreApresGrid{
+
+        font-family: 'Bowlby One', cursive;
+        font-size: 5vw;
+        justify-self: baseline;
+        margin-left: 2rem;
+        line-height: 130%;
+  
+        grid-column-start: 2;
+        grid-row-start: 2;
+        grid-column-end: 6;
+        grid-row-end: 4;
+  
+        background-color: $fond;
+        margin: 15vw;
+          
+        &--retour {
+          display: block;
+        }
+          
+        &--rose {
+          color: $rose;
+        }
+        
+      }
+
+
+
+      .header__grid{
+  
+          display: grid;
+          grid-template-rows: 33% 33% 33%;
+          grid-template-columns: 25% 25% 25% 25%;
+
+          .header__titre{
+
+              display: none;
+
+          }
+
+          .header__logo{
+  
+              background-color: $fond;
+  
+          }
+  
+          .header__link{
+              background-color: $rose;
+              grid-column-start: 4;
+              grid-row-start: 1;
+              grid-row-end: 3;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+  
+  
+          .header__img{
+              width: 100%;
+              height: 100%;
+  
+              &--feux{
+  
+                  grid-column-start: 2;
+  
+              }
+  
+              &--bulle{
+  
+              }
+  
+              &--roue{
+  
+                  grid-row-start: 2;
+                  grid-column-start: 3;
+                  background-color: $fond;
+                  
+              }
+              
+              &--panneaux{
+  
+                  grid-row-start: 3;
+                  
+              }
+  
+              &--map{
+  
+                  grid-row-start: 3;
+                  grid-column-start: 4;
+                  
+              }
+  
+              &--pieton{
+  
+                  grid-row-start: 2;
+                  grid-column-start: 1;
+                  grid-column-end: 3;
+                  
+              }
+  
+              &--voiture{
+  
+                  display: none;
+                  
+              }
+  
+              &--route{
+  
+                  grid-row-start: 3;
+                  grid-column-start: 2;
+                  grid-column-end: 4;
+                  
+              }
+          }
+  
+      }
+
+      .header__bg{
+
+        background-color: $bleu;
+        padding: 5vw;
+        text-align: center;
+
+        .header__sousTitre {
+          font-family: 'Bowlby One', cursive;
+          color: white;
+          text-align: center;
+          font-size:6vw;
+      }
+
+      .header__form{
+
+          
+          display: flex;
+          flex-direction: column;
+          align-items:center;
+          margin-top: 4rem;
+          
+
+          
+
+          .header__input{
+
+              border: none;
+              background-color: $fondInput;
+              margin-top: 6vw;
+              height: 4rem;
+              width: 70%;
+              
+
+          }
+
+          .header__label{
+
+              color: white;
+
+          }
+
+          .header__submit{
+
+              background-color: $bleu;
+              border: $typo solid 1px;
+              font-family: 'Bowlby One', cursive;
+              color: white;
+              margin-top: 4rem
+              
+
+          }
+        }
+
+      }
+
+        
+  
+
+     }
+  
+  
+       
+
+  }
+
+  .main {
+  
+    display:flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    .main__img {
+    }
+
+    .main__presentation {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin:8vw;
+
+      .main__titre {
+        font-size: 4vw;
+        font-family: 'Bowlby One', cursive;
+        margin-bottom: 2.5vh;
+      }
+
+      .main__explication {
+        font-size: 3vw;
+        margin-bottom: 2.5vh;
+      }
+
+      .main__etape {
+        font-size: 3vw;
+        margin-top: 4vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-transform: uppercase;
+
+        .main__etape--chiffre {
+          font-family: 'Bowlby One', cursive;
+          font-size: 10vw;
+          color: $fond;
+          -webkit-text-stroke: 2px $bleu;
+          margin-right: 4vw;
+          
+        margin-bottom: 6vw;
+          
+        }
+
+        .main__etape--chiffre1 {
+          font-family: 'Bowlby One', cursive;
+          font-size: 10vw;
+          color: $bleu;
+          margin-right: 4vw;
+          
+        margin-bottom: 6vw;
+        }
+
+      }
+
+    }
+  
+  }
+
+  .frise {
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+
+    .frise__img {
+      width: 100%;
+      height: 100%;
+
+      &--roue{
+
+      }
+      
+      &--route{
+
+        grid-column-start: 2;
+        grid-column-end: 4;
+        
+      }
+
+      &--panneau{
+        
+      }
+
+      &--voiture{
+        
+      }
+
+      &--bulle{
+        
+      }
+
+      &--route2{
+
+        grid-column-start: 3;
+        grid-column-end: 5;
+        
+      }
+
+
+  
+    }
+  }
+
+@media  screen and  (max-width: 500px)
+{
+    
+
+  .body-profil{
+      background-color: #FFF5F5;
+  }
+  
+  .header-profil{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem;
+  }
+  
+  .header_img-profil{
+      height: 5rem;
+      width: 5rem;
+  }
+  
+  .header_btn-profil{
+      background-color: #F2452D;
+      width: 12rem;
+      height: 3rem;
+      font-family: 'Alef', sans-serif;
+      border: none;
+      color: aliceblue;
+      text-transform: capitalize;
+  }
+  
+  .main_img-profil{
+      height: 11rem;
+      width: 11rem;
+      border-radius: 50%;
+  }
+  
+  .main_title-profil{
+      font-family: 'Bowlby One', cursive; 
+      color: #3141F6;
+      padding-left: 3rem;
+  }
+  
+  .main_section-profil{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+  }
+  .main_img-profil{
+      margin-right: 2rem;
+  }
+  
+  .section-profil{
+      padding: 2rem;
+  
+  }
+  
+  .section_title-profil{
+      font-family: 'Bowlby One', cursive; 
+      font-size: 15px;
+  }
+  
+  .section_text-profil{
+      font-family: 'Alef', sans-serif;
+      line-height: 2.5rem;
+    
+  }
+  .main_btn-profil{
+      background-color: #F2452D;
+      width: 12rem;
+      height: 3rem;
+      font-family: 'Alef', sans-serif;
+      border: none;
+      color: aliceblue;
+      text-transform: capitalize;
+  }
+  
+  .main_btn-profilcontainer{
+      text-align: center;
+  }
+}
+ 
+
+
+}
+
+
+
+/***** RANK *****/
+
+.rank {
+  width: 10%;
+  direction: rtl;
+}
+.rank__e {
+  color: #aaa;
+  transition: color 0.4s;
+  float: right;
+  font-size: 1rem;
+}
+
+.rank__e--inversed {
+  color: gold;
+}
+
+.rank__e:hover,
+.rank__e:focus,
+.rank__e:hover ~ .rank__e,
+.rank__e:focus ~ .rank__e {
+  color: gold;
+  cursor: pointer;
+}
+
+.rank__e--inversed:hover,
+.rank__e--inversed:focus,
+.rank__e--inversed:hover ~ .rank__e--inversed,
+.rank__e--inversed:focus ~ .rank__e--inversed {
+  color: #aaa;
+}
+
+
+li {
+  list-style: none;
+}
